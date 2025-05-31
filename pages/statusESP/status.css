@@ -1,0 +1,121 @@
+:root {
+    --color-primary: #3797FF;
+    --color-secondary: #A2ED8E;
+    --color-white: #FFFFFF;
+    --color-gray: #EAECEF;
+}
+
+body {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+}
+
+.card {
+    background: var(--color-white);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(55, 151, 255, 0.1);
+}
+
+h2 {
+    color: var(--color-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h4 {
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    color: #555;
+    font-weight: 500;
+}
+
+.form-control, .form-select {
+    background-color: var(--color-gray);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--color-white);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgba(55, 151, 255, 0.25);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    border: none;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(55, 151, 255, 0.3);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+/* Estilo para los campos numéricos */
+input[type="number"] {
+    padding-right: 10px;
+}
+
+/* Eliminar las flechas de los inputs numéricos */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Animación suave al cargar la página */
+.card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Estilos para los indicadores de estado */
+.status-indicator {
+    position: fixed;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.connection-status {
+    top: 20px;
+    left: 20px;
+}
+
+.system-status {
+    top: 20px;
+    right: 20px;
+    display: none; /* Inicialmente oculto */
+}
